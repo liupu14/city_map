@@ -14,6 +14,14 @@ from streamlit_folium import folium_static
 
 st.title("Hello World!")
 
-Map = folium.Map()
+Map = folium.Map(location=[28.234562,112.324532],zoom_start=12)
 folium_static(Map)
+
+X = np.random.randn(100)
+y = X * 10 + np.random.randn()
+
+Data = pd.DataFrame({"X":X,"Y":y})
+
+st.write("Table show")
+st.write(Data)
 
