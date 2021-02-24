@@ -12,10 +12,14 @@ import streamlit as st
 import folium 
 from streamlit_folium import folium_static
 
-st.title("Hello World!")
+name = st.sidebar.textinput("Please enter your name")
 
-Map = folium.Map(location=[28.234562,112.324532],zoom_start=12)
-folium_static(Map)
+press = st.sidebar.button("Press")
+
+st.title("Hello World!")
+if press:
+    Map = folium.Map(location=[28.234562,112.324532],zoom_start=12)
+    folium_static(Map)
 
 X = np.random.randn(100)
 y = X * 10 + np.random.randn()
