@@ -12,7 +12,7 @@ import streamlit as st
 import folium 
 from streamlit_folium import folium_static
 
-name = st.sidebar.textinput("Please enter your name")
+name = st.sidebar.text_input("Please enter your name")
 
 press = st.sidebar.button("Press")
 
